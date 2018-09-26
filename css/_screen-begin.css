@@ -1,0 +1,42 @@
+.screen {
+	padding: 0 var(--padding-x);
+	display: none;
+}
+.screen.open {
+	display: block;
+}
+
+#begin {
+	text-align: center;
+}
+#play {
+	font-size: 6em;
+	color: var(--blue);
+	animation: heartbeat 1s infinite linear;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.logo h1 {
+	margin-top: 15%;
+    margin-bottom: 15%;
+    font-size: 3em;
+}
+.logo h1 sup {
+	font-size: 70%;
+    color: var(--blue);
+    text-shadow: 0px 1px 3px;
+}
+
+.sound-control .fa-stack-inner:first-child {
+	display: inline;
+}
+.sound-control .fa-stack-inner:last-child {
+	display: none;
+}
+.sound-control.active .fa-stack-inner:first-child {
+	display: none;
+}
+.sound-control.active .fa-stack-inner:last-child {
+	display: inline;
+}

@@ -1,0 +1,49 @@
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	border: none;
+	outline: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-family: var(--faont-sao);
+}
+.btn::-moz-focus-inner {
+	outline: none !important;
+	border: 0 !important;
+}
+
+.btn.btn-icon {
+	background-color: transparent;
+}
+
+.btn-group {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex: 1;
+}
+.btn-group .btn {
+	width: 100%;
+	font-size: 1.5em;
+	padding: 0.1em;
+	transition: all 0.2s linear;
+}
+.btn-group .btn.active {
+	transform: translateY(5px);
+	box-shadow: 0 1px 5px 0 var(--rblack);
+	pointer-events: none;
+}
+
+.btn-primary {
+	background-color: var(--blue);
+	color: var(--white);
+}
+.btn-success {
+	background-color: var(--green);
+	color: var(--white);
+}
+.btn-danger {
+	background-color: var(--red);
+	color: var(--white);
+}

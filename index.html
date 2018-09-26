@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/x-icon" href="dist/imgs/favicon.png">
+	<title>Picture Lover Blue</title>
+
+	<link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="dist/main.min.css">
+</head>
+<body>
+	<div class="preloader">
+		<div class="spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div>
+	</div>
+
+	<!-- audio -->
+	<audio src="audios/bg.mp3" id="bg-music" preload loop></audio>
+
+	<div class="wrapper">
+		<div class="cloud-bg">
+			<div class="cloud-holder">
+				<img class="img-responsive" src="dist/imgs/cloud.png">
+			</div>
+			<div class="cloud-holder">
+				<img class="img-responsive" src="dist/imgs/cloud.png">
+			</div>
+			<div class="cloud-holder">
+				<img class="img-responsive" src="dist/imgs/cloud.png">
+			</div>
+			<div class="cloud-holder">
+				<img class="img-responsive" src="dist/imgs/cloud.png">
+			</div>
+			<div class="cloud-holder visible-768">
+				<img class="img-responsive" src="dist/imgs/cloud.png">
+			</div>
+			<div class="cloud-holder visible-768">
+				<img class="img-responsive" src="dist/imgs/cloud.png">
+			</div>
+		</div>
+		<div class="plane">
+			<i class="fa fa-plane"></i>
+		</div>
+
+		<header id="header">
+			<div></div>
+			<div></div>
+			<div></div>
+		</header>
+
+		<div class="screen open" id="begin">
+			<div class="logo">
+				<h1>
+					Picture Lover
+					<sup>blue</sup>
+				</h1>
+			</div>
+
+			<div class="btn-group level-wrap">
+				<button class="btn btn-success level" onclick="setLevel(this, 'easy')">Easy</button>
+				<button class="btn btn-primary level active" onclick="setLevel(this, 'medium')">Medium</button>
+				<button class="btn btn-danger level" onclick="setLevel(this, 'hard')">Hard</button>
+			</div>
+
+			<button id="play" class="btn btn-icon" onclick="play()">
+				<i class="fa fa-gamepad fa-fw" aria-hidden="true"></i>
+			</button>
+			
+			<div class="text-center">
+				<span class="fa-stack fa-lg" onclick="">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa fa-info fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="fa-stack fa-lg" onclick="openScreen('#pick')">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="fa-stack fa-lg sound-control" onclick="sound(this)">
+					<div class="fa-stack-inner">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-music fa-stack-1x fa-inverse"></i>
+					</div>
+					<div class="fa-stack-inner">
+						<i class="fa fa-music fa-stack-1x"></i>
+						<i class="fa fa-ban fa-stack-2x"></i>
+					</div>
+				</span>
+			</div>
+		</div>
+
+		<div class="screen" id="in-process">
+			<div class="process-header clearfix">
+				<div class="pull-left">
+					<button class="btn btn-icon process-action" onclick="openScreen('#begin')">
+						<i class="fa fa-home"></i>
+					</button>
+					<button class="btn btn-icon process-action" onclick="replay()">
+						<i class="fa fa-refresh"></i>
+					</button>
+					<button class="btn btn-icon process-action" onclick="hint()" id="hint">
+						<i class="fa fa-lightbulb-o"></i>
+						<span id="hint-count"></span>
+					</button>
+				</div>
+				<div class="pull-right">
+					<a id="download" href="" download>
+						<i class="fa fa-cloud-download" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+			<div class="process-content">
+				<div class="board clearfix"></div>
+			</div>
+		</div>
+
+		<div class="screen" id="pick">
+			<div class="pick-header clearfix">
+				<button class="btn btn-icon pull-left" id="pick-back" onclick="openScreen('#begin')">
+					<i class="fa fa-home fa-2x"></i>
+				</button>
+				<div class="pull-right">
+					<input type="text" placeholder="Enter image url" id="url-submit">
+					<button class="btn btn-icon" id="pick-submit" onclick="submitImg()">
+						<i class="fa fa-cloud-upload fa-2x"></i>
+					</button>
+				</div>
+			</div>
+			<div class="pick-land">
+				<figure class="pick-item active" onclick="setImage(this)">
+					<img class="img-responsive" src="dist/imgs/sample-1.jpg">
+					<figcaption>Picked</figcaption>
+				</figure>
+				<figure class="pick-item" onclick="setImage(this)">
+					<img class="img-responsive" src="dist/imgs/sample-2.jpg">
+					<figcaption>Picked</figcaption>
+				</figure>
+				<figure class="pick-item" onclick="setImage(this)">
+					<img class="img-responsive" src="dist/imgs/sample-3.jpg">
+					<figcaption>Picked</figcaption>
+				</figure>
+				<figure class="pick-item" onclick="setImage(this)">
+					<img class="img-responsive" src="dist/imgs/sample-4.jpg">
+					<figcaption>Picked</figcaption>
+				</figure>
+				<figure class="pick-item" onclick="setImage(this)">
+					<img class="img-responsive" src="dist/imgs/sample-5.jpg">
+					<figcaption>Picked</figcaption>
+				</figure>
+				<figure class="pick-item" onclick="setImage(this)">
+					<img class="img-responsive" src="dist/imgs/sample-6.jpg">
+					<figcaption>Picked</figcaption>
+				</figure>
+				<figure class="pick-item" onclick="setImage(this)">
+					<img class="img-responsive" src="dist/imgs/sample-7.jpg">
+					<figcaption>Picked</figcaption>
+				</figure>
+				<figure class="pick-item" onclick="setImage(this)">
+					<img class="img-responsive" src="dist/imgs/sample-8.jpg">
+					<figcaption>Picked</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<footer id="footer">
+			301 EMPIRE
+			<div class="kite-holder">
+				<img class="img-responsive" src="dist/imgs/kite.png">
+			</div>
+		</footer>
+	</div>
+	
+	<script src="vendor/jquery-3.3.1.min.js"></script>
+	<script src="dist/script.min.js"></script>
+</body>
+</html>

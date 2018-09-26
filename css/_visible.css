@@ -1,0 +1,9 @@
+.visible-768 {
+	display: none;
+}
+
+@media (min-height: 768px) {
+	.visible-768 {
+		display: inline-block;
+	}
+}

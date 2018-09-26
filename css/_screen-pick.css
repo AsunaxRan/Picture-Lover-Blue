@@ -1,0 +1,48 @@
+#pick {
+	padding-bottom: 20px;
+}
+
+.pick-header button {
+	color: var(--blue);
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#url-submit {
+	border: none;
+    border-bottom: 1px solid var(--blue);
+    padding: 2px 2px 2px 0;
+    display: inline-block;
+    vertical-align: super;
+    outline: none !important;
+    font-family: var(--font-sao);
+}
+#url-submit::placeholder {
+	font-family: var(--font-sao);
+}
+
+.pick-land {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.pick-item {
+	width: 48%;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.pick-item figcaption {
+	position: absolute;
+	bottom: 100%;
+	width: 100%;
+	text-align: center;
+	color: var(--white);
+	background-color: var(--blue);
+	transition: 0.2s bottom linear;
+}
+.pick-item.active figcaption {
+	bottom: 0;
+}

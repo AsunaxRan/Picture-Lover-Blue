@@ -1,0 +1,57 @@
+.cloud-bg {}
+
+.cloud-bg .cloud-holder {
+	position: absolute;
+	z-index: -1;
+}
+.cloud-bg .cloud-holder:first-child {
+    width: 10%;
+    top: 345px;
+    left: -1%;
+    animation: cloud_one linear 6s infinite;
+}
+.cloud-bg .cloud-holder:nth-child(2) {
+    width: 16%;
+    top: 33px;
+    left: 5%;
+    animation: cloud_two linear 5s infinite;
+}
+.cloud-bg .cloud-holder:nth-child(3) {
+    width: 16%;
+    top: 90px;
+    left: 78%;
+    animation: cloud_three 6 linear.4s infinite;
+}
+.cloud-bg .cloud-holder:nth-child(4) {
+    width: 10%;
+    top: 320px;
+    left: 89%;
+    animation: cloud_four 5 linear.4s infinite;
+}
+.cloud-bg .cloud-holder:nth-child(5) {
+    transform: rotateY(180deg);
+    width: 12%;
+    bottom: 9%;
+    left: 51%;
+    animation: cloud_five linear 6s infinite;
+}
+.cloud-bg .cloud-holder:nth-child(6) {
+    width: 17%;
+    bottom: 15%;
+    left: 40%;
+    animation: cloud_six linear 4s infinite;
+}
+.plane {
+	position: absolute;
+	left: 10%;
+	bottom: 0;
+	color: var(--black);
+	animation: fly 32s linear 3s 1;
+}
+
+.kite-holder {
+	position: absolute;
+    width: 5%;
+    bottom: 0;
+    left: 35%;
+}

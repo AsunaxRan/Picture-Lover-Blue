@@ -1,0 +1,57 @@
+.process-header {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.process-action {
+	color: var(--blue);
+	font-size: 1.5em;
+	margin-right: 0.5em;
+}
+#download {
+	color: var(--blue);
+	font-size: 1.5em;
+}
+#download.disabled {
+	pointer-events: none;
+	filter: grayscale(100%);
+}
+#hint-count {
+	font-size: 0.6em;
+	margin-left: -5px;
+}
+
+.board {
+	overflow: hidden;
+}
+
+.cell {
+	display: inline-block;
+	float: left;
+	width: var(--cell-width);
+	height: var(--cell-width);
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid var(--blue);
+	transition: 1s border ease-in;
+}
+.cell-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transition: 0.1s transform linear;
+}
+.cell-content img {
+	position: absolute;
+	z-index: auto;
+}
+.cell.active {
+	box-shadow: inset 0 0px 20px 2px var(--rblue);
+}
+.cell.active .cell-content {
+	transform: scale(0.9);
+}
+.cell.highlight .cell-content {
+	transform: scale(0.9);
+    box-shadow: 0 0 5px 1px var(--blue);
+}

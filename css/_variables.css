@@ -1,0 +1,39 @@
+:root {
+	--font-sao: 	"SAOUI";
+	--rblack: 		rgba(0,0,0,0.8);
+	--rblue: 		rgba(3,146,207,0.7);
+	--white: 		#fff;
+	--blue: 		#0392cf;
+	--red: 			#ee4035;
+	--orange: 		#f37736;
+	--yellow: 		#fdf498;
+	--green: 		#7bc043;
+	--padding-x: 	15px;
+	--ncol: 		4;
+	--nrow: 		6;
+	--max-width: 	100vw;
+	--max-height: 	100vh;
+	--img-width: 	0;
+	--img-height: 	0;
+	--board-width: 	calc(var(--max-width) - var(--padding-x) * 2);
+	--cell-width: 	calc(var(--board-width) / var(--ncol));
+	--board-height: calc(var(--cell-width) * var(--nrow));
+	--pull-imgx: 	calc((var(--img-width) - var(--board-width)) / 2);
+	--pull-imgy: 	calc((var(--img-height) - var(--board-height)) / 2);
+}
+
+@media (min-width: 415px) and (max-width: 1599px) {
+	:root {
+		--max-width: 	375px;
+		--max-height: 	750px;
+	}
+}
+
+@media (min-width: 1600px) {
+
+	:root {
+		--max-width: 	414px;
+		--max-height: 	812px;
+	}
+
+}

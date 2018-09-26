@@ -1,0 +1,73 @@
+@keyframes heartbeat {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes cloud_one {
+	0% {
+		left: -1%;
+	}
+	50% {
+		left: 0%;
+	}
+	100% {
+		left: -1%;
+	}
+}
+@keyframes cloud_two {
+	0% {
+		left: 5%;
+	}
+	50% {
+		left: 5.6%;
+	}
+	100% {
+		left: 5%;
+	}
+}
+@keyframes cloud_three {
+	0% {
+		left: 78%;
+	}
+	50% {
+		left: 78.8%;
+	}
+	100% {
+		left: 78%;
+	}
+}
+@keyframes cloud_five {
+	0% {
+		left: 51%;
+	}
+	50% {
+		left: 50%;
+	}
+	100% {
+		left: 51%;
+	}
+}
+@keyframes cloud_six {
+	0% {
+		left: 40%;
+	}
+	50% {
+		left: 40.9%;
+	}
+	100% {
+		left: 40%;
+	}
+}
+
+@keyframes fly {
+	100% {
+		transform: translateX(400px) translateY(-400px) scale(0.5);
+	}
+} 
