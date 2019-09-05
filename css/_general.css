@@ -33,7 +33,7 @@
 	margin-right: auto;
 	box-shadow: 0 0 10px var(--rblack);
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: hidden;
 }
 
 #footer {
