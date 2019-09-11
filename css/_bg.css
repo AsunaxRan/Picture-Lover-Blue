@@ -43,7 +43,7 @@
 }
 .plane {
 	position: absolute;
-	left: 10%;
+	left: -5%;
 	bottom: 0;
 	color: var(--black);
 	animation: fly 32s linear 3s 1;
